@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
 from .functions import BiomeType
 
 def biome_form():
@@ -15,8 +14,8 @@ def biome_form():
 
             name = st.text_input("Name the Biome:")
             area = st.slider("Define Biome Area (Sq.Km):", min_value=10, max_value=100)
-            temperature = st.number_input("Define Average Yearly Temperature (°C):")
-            precipitation = st.number_input("Define Average Yearly Precipitation (cm):")
+            temperature = st.number_input("Define Average Yearly Temperature (°C):", min_value=-273.15)
+            precipitation = st.number_input("Define Average Yearly Precipitation (cm):", min_value=0)
 
             if st.form_submit_button("Save Biome Definitions"):
 
