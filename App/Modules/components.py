@@ -84,3 +84,7 @@ def render_biome_details(biome: object):
     )
 
     st.plotly_chart(fig)
+
+def specie_form():
+
+    number = st.number_input("Select the Number of Species: ", min_value=1)
